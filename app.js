@@ -1,5 +1,4 @@
 require("dotenv").config();
-
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
@@ -19,6 +18,7 @@ const RateLimit = require("express-rate-limit");
 const limiter = RateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
   max: 100,
+  validate: { xForwardedForHeader: false },
 });
 // Apply rate limiter to all requests
 app.use(limiter);
@@ -27,7 +27,7 @@ app.use(limiter);
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
-const mongoDB = process.env.MongoDbUrl(); // hidden in .env file
+const mongoDB = process.env.MongoDbUrl; // hidden in .env file
 
 main().catch((err) => console.log(err));
 async function main() {
