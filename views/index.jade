@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to showroom inventory, a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
+
+  h1 Dynamic content
+
+  p The showroom has the following record counts:
+
+  ul(class='standardList')
+    li #[strong Economy Car Models:] !{economyCars}
+    li #[strong Luxury Car Models:] !{luxuryCars}
+    li #[strong Total Car Models:] !{totalCars}
+

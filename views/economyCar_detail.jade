@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 #{title}
+
+  p #[strong Manufacturer :] #{economyCar.manufacturer}
+  p #[strong Model:] #{economyCar.model}
+  p #[strong Price:] £#{economyCar.price}
+  p #[strong Type:] #{economyCar.type}
+  p #[strong Seats:] #{economyCar.seats}
+  p #[strong Luggage Volume:] #{economyCar.luggageVolume}l
+  p #[strong Stock:] #{economyCar.stock}
+
+  hr
+  p
+    a(href=economyCar.url+'/delete') Delete Car
+  p
+    a(href=economyCar.url+'/update') Update Car

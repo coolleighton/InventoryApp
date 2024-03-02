@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+  h1 #{title}: #{luxuryCar.manufacturer} #{luxuryCar.model}
+
+  p Do you really want to delete this car?
+
+  form(method='POST')
+    div
+        input(type='hidden', name='luxuryCarid', value=luxuryCar._id )
+        button(type='submit') Delete

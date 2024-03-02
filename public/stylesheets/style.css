@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+hr {
+  margin: 0.5rem 0;
+}
+
+h1 {
+  margin: 0.5rem 0 0.3rem 0;
+}
+
+.mainDiv {
+  display: flex;
+  margin: 1rem;
+}
+
+.mainMenu {
+  margin-right: 1rem;
+}
+
+.standardList {
+  margin-top: 0.5rem;
+}
+
+.lis {
+  margin-top: 0.4rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}

@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 #{title}
+
+  p #[strong Manufacturer :] #{luxuryCar.manufacturer}
+  p #[strong Model:] #{luxuryCar.model}
+  p #[strong Price:] £#{luxuryCar.price}
+  p #[strong Type:] #{luxuryCar.type}
+  p #[strong Power:] #{luxuryCar.power}Hsp
+  p #[strong Engine:] #{luxuryCar.engine}
+  p #[strong stock:] #{luxuryCar.stock}
+
+  hr
+  p
+    a(href=luxuryCar.url+'/delete') Delete Car
+  p
+    a(href=luxuryCar.url+'/update') Update Car

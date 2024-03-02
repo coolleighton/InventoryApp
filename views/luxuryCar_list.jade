@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  if luxuryCar_list.length
+    ul
+      each luxuryCar in luxuryCar_list
+        li(class="lis")
+          a(href=luxuryCar.url) #{luxuryCar.manufacturer} #{luxuryCar.model}
+          p price: £#{luxuryCar.price}
+          p in Stock: #{luxuryCar.stock}
+
+  else
+    p There are no books.

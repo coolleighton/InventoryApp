@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div
+      div(class='mainDiv')
+        div(class='mainMenu')
+          block sidebar
+            ul(class='standardList')
+              li
+                a(href='/catalog') Home
+              li
+                a(href='/catalog/economyCar') Economy Cars
+              li
+                a(href='/catalog/luxuryCar') Luxury Cars
+                hr
+              li
+                a(href='/catalog/economyCar/create') Add New Economy Car
+              li
+                a(href='/catalog/luxuryCar/create') Add New Luxury Car
+
+        div
+          block content

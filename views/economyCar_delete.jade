@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+  h1 #{title}: #{economyCar.manufacturer} #{economyCar.model}
+
+  p Do you really want to delete this car?
+
+  form(method='POST')
+    div
+        input(type='hidden', name='economyCarid', value=economyCar._id )
+        button(type='submit') Delete

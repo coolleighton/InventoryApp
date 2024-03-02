@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  if economyCar_list.length
+    ul
+      each economyCar in economyCar_list
+        li(class="lis")
+          a(href=economyCar.url) #{economyCar.manufacturer} #{economyCar.model}
+          p price: £#{economyCar.price}
+          p in Stock: #{economyCar.stock}
+
+  else
+    p There are no cars.

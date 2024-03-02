@@ -1,0 +1,28 @@
+extends layout
+
+block content
+
+  h1 #{title}
+
+  form(method='POST')
+    div.form-group
+      label(for='model') Model:
+      input#name.form-control(type='text', placeholder='Corsa, Aventador etc.' name='model' required value=(undefined===economyCar ? '' : economyCar.model) )
+      label(for='manufacturer') Manufacturer:
+      input#name.form-control(type='text', placeholder='Vauxhall, Lamborghini etc.' name='manufacturer' required value=(undefined===economyCar ? '' : economyCar.manufacturer) )
+      label(for='type') Type:
+      input#name.form-control(type='text', placeholder='Hatchback, Coupe etc.' name='type' required value=(undefined===economyCar ? '' : economyCar.type) )
+      label(for='seats') Seats:
+      input#name.form-control(type='text', placeholder='2, 4 etc.' name='seats' required value=(undefined===economyCar ? '' : economyCar.seats) )
+      label(for='luggageVolume') Luggage Volume In litres:
+      input#name.form-control(type='text', placeholder='110, 200 etc.' name='luggageVolume' required value=(undefined===economyCar ? '' : economyCar.luggageVolume) )
+      label(for='price') Price In £:
+      input#name.form-control(type='text', placeholder='10000, 300000 etc.' name='price' required value=(undefined===economyCar ? '' : economyCar.price) )
+      label(for='stock') Stock:
+      input#name.form-control(type='text', placeholder='1, 2 etc.' name='stock' required value=(undefined===economyCar ? '' : economyCar.stock) )
+    button.btn.btn-primary(type='submit') Submit
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg
